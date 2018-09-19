@@ -89,6 +89,6 @@ $(document).ready(function () {
 
     var hammertime = new Hammer(document.querySelector('.swipe-left'));
     hammertime.on('swipeleft', function (ev) {
-        window.location.href = "./dashboard-battery-usage.html";
+        window.location.href = "./dashboard-energy-usage.html";
     });
 });

@@ -11,12 +11,12 @@ $(document).ready(function () {
         {
             type: "doughnut",
             data: {
-                labels: ["Pardavimas", "Pirkimas"],
+                labels: ["Naudojimas", "Gaminimas"],
                 datasets: [
                     {
                         label: "Jegainė",
                         data: [300, 100],
-                        backgroundColor: ["#50E3C2", "#F5A623"]
+                        backgroundColor: ["#9FE060", "#2C8693"]
                     }
                 ]
             },
@@ -44,14 +44,14 @@ $(document).ready(function () {
             datasets: [
                 {
                     data: [150, 170, 260, 200, 160],
-                    label: "Pardavimas",
-                    borderColor: "#F5A623",
+                    label: "Naudojimas",
+                    borderColor: "#9FE060",
                     fill: false
                 },
                 {
                     data: [210, 260, 230, 100, 250],
-                    label: "Pirkimas",
-                    borderColor: "#50E3C2",
+                    label: "Gaminimas",
+                    borderColor: "#2C8693",
                     fill: false
                 }
             ]
@@ -89,6 +89,6 @@ $(document).ready(function () {
 
     var hammertime = new Hammer(document.querySelector('.swipe-left'));
     hammertime.on('swipeleft', function (ev) {
-        window.location.href = "./dashboard-battery-usage.html";
+        window.location.href = "./dashboard-energy-usage.html";
     });
 });
