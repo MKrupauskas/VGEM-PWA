@@ -4,11 +4,11 @@
     "start_url": ".",
     "display": "standalone",
     "background_color": "#fff",
-    "theme_color": "#34a3ab",
+    "theme_color": "#50E3C2",
     "description": "The application of VGEM",
     "icons": [
         {
-            "src": "images/icon.png",
+            "src": "logo.png",
             "sizes": "512x512",
             "type": "image/png"
         }
