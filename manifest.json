@@ -1,0 +1,16 @@
+{
+    "name": "VGEM",
+    "short_name": "VGEM",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#34a3ab",
+    "description": "The application of VGEM",
+    "icons": [
+        {
+            "src": "images/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
