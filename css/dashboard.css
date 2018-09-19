@@ -25,7 +25,7 @@
     flex: 1;
 }
 
-.info-block-label, .footer-block-label {
+.info-block-label, .footer-block-label, .label {
     color: #9B9B9B;
     font-family: "Roboto";
 }
@@ -76,4 +76,19 @@
     line-height: 1;
     font-size: 50px;
     font-family: "Roboto";
+}
+
+.market-item {
+    font-size: 13px;
+    font-family: "Roboto";
+    border-top: 1px solid #E7EBEF;
+    border-bottom: 1px solid #E7EBEF;
+}
+
+.market-item-buyer, .market-item-seller {
+    flex: 1;
+} 
+
+.market-item-buyer {
+    border-left: 1px solid #E7EBEF;
 }
