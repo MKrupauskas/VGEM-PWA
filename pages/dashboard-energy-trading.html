@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <meta name="theme-color" content="#34a3ab">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <title>VGEM - dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="./../css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="d-flex justify-content-between align-items-center p-2 header">
+        <i class="fas fa-ellipsis-h"></i>
+        <span class="">Mano energijos birža</span>
+        <i class="fas fa-cog"></i>
+    </div>
+    <div class="container">
+        <div class="row">
+            <canvas class="col-6 js-dashboard-pie" id="dashboard-pie-1"></canvas>
+            <i class="dashboard-pie-icon js-dashboard-pie-icon fas fa-bolt" id="dashboard-pie-icon-1"></i>
+            <div class="col-6 d-flex flex-column">
+                <div class="info-block mt-2">
+                    <div class="info-block-label">
+                        Pardavimas
+                    </div>
+                    <div class="info-block-value teal">
+                        15 kWh
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-block-label">
+                        Pirkimas
+                    </div>
+                    <div class="info-block-value orange">
+                        15 kWh
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <canvas class="col-12 js-dashboard-pie" id="dashboard-line-chart" height="270px"></canvas>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 market-item">
+
+            </div>
+        </div>
+    </div>
+
+    <a href="./dashboard-energy-usage.html" class="fixed-link d-flex align-items-center justify-content-center"><i class="fas fa-home"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="./../js/dashboard-energy-trading.js"></script>
+</body>
+
+</html>
