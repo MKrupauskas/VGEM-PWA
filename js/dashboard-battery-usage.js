@@ -24,10 +24,10 @@ $(document).ready(function () {
         }
     );
 
-    setInterval(function () {
-        chartPie.data.datasets[0].data[0] += 10;
-        chartPie.update();
-    }, 1000);
+    // setInterval(function () {
+    //     chartPie.data.datasets[0].data[0] += 10;
+    //     chartPie.update();
+    // }, 1000);
 
     var pieChart = document.querySelector(".js-dashboard-pie");
     pieChart.style.height = pieChart.clientWidth - 30 + "px";
@@ -40,16 +40,16 @@ $(document).ready(function () {
     new Chart(document.getElementById("dashboard-line-chart").getContext("2d"), {
         type: "line",
         data: {
-            labels: ['09/12', '09/12', '09/12', '09/12', '09/12'],
+            labels: ['09/12', '09/13', '09/14', '09/15', '09/16'],
             datasets: [
                 {
-                    data: [150, 170, 260, 200, 160],
+                    data: [15, 17, 26, 20, 16],
                     label: "Naudojimas",
                     borderColor: "#9FE060",
                     fill: false
                 },
                 {
-                    data: [210, 260, 230, 100, 250],
+                    data: [21, 26, 23, 10, 25],
                     label: "Gaminimas",
                     borderColor: "#2C8693",
                     fill: false
@@ -88,7 +88,7 @@ $(document).ready(function () {
     });
 
     var hammertime = new Hammer(document.querySelector('.swipe-left'));
-    hammertime.on('swipeleft', function (ev) {
+    hammertime.on('swipeleft swiperight', function (ev) {
         window.location.href = "./dashboard-energy-usage.html";
     });
 });

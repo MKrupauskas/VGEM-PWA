@@ -15,7 +15,7 @@ $(document).ready(function () {
                 datasets: [
                     {
                         label: "Jegainė",
-                        data: [300, 100],
+                        data: [100, 33],
                         backgroundColor: ["#50E3C2", "#F5A623"]
                     }
                 ]
@@ -24,8 +24,13 @@ $(document).ready(function () {
         }
     );
 
+    var change = document.querySelector('.js-change');
+
+    var counter = 15;
     setInterval(function () {
-        chartPie.data.datasets[0].data[0] += 10;
+        change.innerHTML = counter.toFixed(1) + ' kWh';
+        chartPie.data.datasets[0].data[0] += 3;
+        counter += Math.random() / 20;
         chartPie.update();
     }, 1000);
 
@@ -40,16 +45,16 @@ $(document).ready(function () {
     new Chart(document.getElementById("dashboard-line-chart").getContext("2d"), {
         type: "line",
         data: {
-            labels: ['09/12', '09/12', '09/12', '09/12', '09/12'],
+            labels: ['14:00', '15:00', '16:00', '17:00', '18:00'],
             datasets: [
                 {
-                    data: [150, 170, 260, 200, 160],
+                    data: [15, 17, 26, 20, 16],
                     label: "Pardavimas",
                     borderColor: "#F5A623",
                     fill: false
                 },
                 {
-                    data: [210, 260, 230, 100, 250],
+                    data: [21, 26, 23, 10, 25],
                     label: "Pirkimas",
                     borderColor: "#50E3C2",
                     fill: false
@@ -88,7 +93,7 @@ $(document).ready(function () {
     });
 
     var hammertime = new Hammer(document.querySelector('.swipe-left'));
-    hammertime.on('swipeleft', function (ev) {
+    hammertime.on('swipeleft swiperight', function (ev) {
         window.location.href = "./dashboard-battery-usage.html";
     });
 });
