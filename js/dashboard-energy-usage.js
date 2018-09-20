@@ -34,6 +34,7 @@ $(document).ready(function () {
 
     var pieChartIcon = document.querySelector(".js-dashboard-pie-icon");
     var xOffset = pieChart.clientWidth / 2 - pieChartIcon.clientWidth / 2 + "px";
+    console.log(xOffset)
     pieChartIcon.style.top = (pieChart.clientHeight / 2) - (pieChartIcon.clientHeight / 2) + 40 + "px";
     pieChartIcon.style.left = xOffset;
 
@@ -61,7 +62,7 @@ $(document).ready(function () {
                 enabled: true,
                 mode: 'single',
                 callbacks: {
-                    label: function(tooltipItems, data) { 
+                    label: function (tooltipItems, data) {
                         return data.datasets[tooltipItems.datasetIndex].label + ': ' + tooltipItems.yLabel + ' kWh';
                     }
                 }
@@ -70,7 +71,7 @@ $(document).ready(function () {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                        callback: function(value, index, values) {
+                        callback: function (value, index, values) {
                             return value + ' kWh';
                         }
                     }
@@ -85,5 +86,10 @@ $(document).ready(function () {
                 }
             }
         }
+    });
+
+    var hammertime = new Hammer(document.querySelector('.swipe-left'));
+    hammertime.on('swipeleft', function (ev) {
+        window.location.href = "./dashboard-battery-usage.html";
     });
 });
