@@ -15,7 +15,7 @@ $(document).ready(function () {
                 datasets: [
                     {
                         label: "Jegainė",
-                        data: [300, 100],
+                        data: [28, 6],
                         backgroundColor: ["#9FE060", "#2C8693"]
                     }
                 ]
@@ -24,10 +24,10 @@ $(document).ready(function () {
         }
     );
 
-    setInterval(function () {
-        chartPie.data.datasets[0].data[0] += 10;
-        chartPie.update();
-    }, 1000);
+    // setInterval(function () {
+    //     chartPie.data.datasets[0].data[0] += 10;
+    //     chartPie.update();
+    // }, 1000);
 
     var pieChart = document.querySelector(".js-dashboard-pie");
     pieChart.style.height = pieChart.clientWidth - 30 + "px";
@@ -41,16 +41,16 @@ $(document).ready(function () {
     new Chart(document.getElementById("dashboard-line-chart").getContext("2d"), {
         type: "line",
         data: {
-            labels: ['09/12', '09/12', '09/12', '09/12', '09/12'],
+            labels: ['14:00', '15:00', '16:00', '17:00', '18:00'],
             datasets: [
                 {
-                    data: [150, 170, 260, 200, 160],
+                    data: [8, 8, 10, 22, 28],
                     label: "Naudojimas",
                     borderColor: "#9FE060",
                     fill: false
                 },
                 {
-                    data: [210, 260, 230, 100, 250],
+                    data: [11, 9, 9, 8, 6],
                     label: "Gaminimas",
                     borderColor: "#2C8693",
                     fill: false
@@ -89,7 +89,7 @@ $(document).ready(function () {
     });
 
     var hammertime = new Hammer(document.querySelector('.swipe-left'));
-    hammertime.on('swipeleft', function (ev) {
+    hammertime.on('swipeleft swiperight', function (ev) {
         window.location.href = "./dashboard-battery-usage.html";
     });
 });
