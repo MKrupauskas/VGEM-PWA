@@ -89,7 +89,8 @@ $(document).ready(function () {
     });
 
     var hammertime = new Hammer(document.querySelector('.swipe-left'));
-    hammertime.on('swipeleft swiperight', function (ev) {
+    hammertime.on('swipeleft', function (ev) {
         window.location.href = "./dashboard-battery-usage.html";
     });
+    
 });

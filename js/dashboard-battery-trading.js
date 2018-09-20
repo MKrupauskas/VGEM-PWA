@@ -87,8 +87,8 @@ $(document).ready(function () {
         }
     });
 
-    var hammertime = new Hammer(document.querySelector('.swipe-left'));
-    hammertime.on('swipeleft swiperight', function (ev) {
-        window.location.href = "./dashboard-energy-usage.html";
+    var hammertime = new Hammer(document.querySelector('.swipe-right'));
+    hammertime.on('swiperight', function (ev) {
+        window.location.href = "./dashboard-energy-trading.html";
     });
 });
