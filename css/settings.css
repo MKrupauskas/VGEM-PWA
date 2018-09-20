@@ -26,6 +26,11 @@
     color: #50E3C2;
 }
 
+.btn-color {
+    background-color: #2C8693;
+    border: 0;
+}
+
 .blue {
     color: #2C8693;
 }
@@ -33,5 +38,10 @@
 .white {
     color: #FFFFFF;
     font-weight: bold;
+    font-family: "Roboto";
+}
+
+.label {
+    color: #9B9B9B;
     font-family: "Roboto";
 }
