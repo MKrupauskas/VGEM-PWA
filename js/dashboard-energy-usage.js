@@ -11,11 +11,11 @@ $(document).ready(function () {
         {
             type: "doughnut",
             data: {
-                labels: ["Naudojimas", "Gaminimas"],
+                labels: ["Pagaminta", "Nupirkta"],
                 datasets: [
                     {
                         label: "Jegainė",
-                        data: [28, 6],
+                        data: [9, 3],
                         backgroundColor: ["#9FE060", "#2C8693"]
                     }
                 ]
@@ -44,14 +44,14 @@ $(document).ready(function () {
             labels: ['14:00', '15:00', '16:00', '17:00', '18:00'],
             datasets: [
                 {
-                    data: [8, 8, 10, 22, 28],
-                    label: "Naudojimas",
+                    data: [13, 13, 11, 10, 9],
+                    label: "Pagaminta",
                     borderColor: "#9FE060",
                     fill: false
                 },
                 {
-                    data: [11, 9, 9, 8, 6],
-                    label: "Gaminimas",
+                    data: [0, 0, 1, 2, 3],
+                    label: "Nupirkta",
                     borderColor: "#2C8693",
                     fill: false
                 }

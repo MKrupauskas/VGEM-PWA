@@ -15,7 +15,7 @@ $(document).ready(function () {
                 datasets: [
                     {
                         label: "Jegainė",
-                        data: [100, 33],
+                        data: [100, 0],
                         backgroundColor: ["#50E3C2", "#F5A623"]
                     }
                 ]
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     var change = document.querySelector('.js-change');
 
-    var counter = 15;
+    var counter = 3;
     setInterval(function () {
         change.innerHTML = counter.toFixed(1) + ' kWh';
         chartPie.data.datasets[0].data[0] += 3;
@@ -48,13 +48,13 @@ $(document).ready(function () {
             labels: ['14:00', '15:00', '16:00', '17:00', '18:00'],
             datasets: [
                 {
-                    data: [15, 17, 26, 20, 16],
+                    data: [0.5, 1.5, 0, 0, 0],
                     label: "Pardavimas",
                     borderColor: "#F5A623",
                     fill: false
                 },
                 {
-                    data: [21, 26, 23, 10, 25],
+                    data: [0, 0, 1, 2, 3],
                     label: "Pirkimas",
                     borderColor: "#50E3C2",
                     fill: false
